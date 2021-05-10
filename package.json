@@ -1,0 +1,9 @@
+{
+  "devDependencies": {},
+  "scripts": {
+    "build": "rm -f image-recover.zip && zip -r image-recover.zip .",
+    "deploy": "yarn build && aws lambda update-function-code --function-name image-recover --zip-file fileb://image-recover.zip"
+  },
+  "dependencies": {
+  }
+}
